@@ -1,7 +1,9 @@
 {
- "_help": "일정 편집: 시간(t), 제목(en·ka), 강사(sp), 날짜(date, 그날 00:00 트빌리시에 자료 공개)를 고친 뒤 publish.bat. dir은 materials 폴더 이름이라 바꾸지 마세요. 쉼표·따옴표 형식이 깨지면 사이트가 안 열립니다.",
- "venue": "Hilton Garden Inn Tbilisi Chavchavadze · 64a Ilia Chavchavadze Ave",
- "dates": "24–27.11.2026",
+ "_help": "일정 편집: 시간(t), 제목(en·ka), 강사(sp), 날짜(date, 그날 00:00 트빌리시에 자료 공개)를 고친 뒤 publish.bat. dir은 materials 폴더 이름이라 바꾸지 마세요. 쉼표·따옴표 형식이 깨지면 사이트가 안 열립니다. 행사(개회·폐회 등)는 {\"ev\":1,\"t\":\"시간\",\"en\":\"영어\",\"ka\":\"조지아어\"}. 출처: 바탕화면 「2026 조지아 DGCC 역량강화 개최 계획_영문.hwp」.",
+ "title": "DGCC – Georgia AI & Digital Government Capacity-Building",
+ "dates": "24–26.11.2026 · 09:30–17:00",
+ "venue": "Hilton Garden Inn Tbilisi Chavchavadze · 64a Ilia Chavchavadze Avenue, 0162",
+ "note": "კორეულ-ქართული თანმიმდევრული თარგმანი · Consecutive Korean–Georgian interpretation throughout the program",
  "days": [
   {
    "n": 1,
@@ -10,15 +12,22 @@
    "ka": "სამშაბათი, 24 ნოემბერი",
    "slots": [
     {
-     "s": 1,
-     "dir": "D1_S1",
-     "t": "09:30–12:30",
-     "en": "E-Government/Digital Government in Korea",
-     "ka": "ელექტრონული მმართველობა / ციფრული მმართველობა კორეაში",
-     "sp": "Dr. Kwangsok Oh"
+     "ev": 1,
+     "t": "09:30–10:00",
+     "en": "Opening Ceremony",
+     "ka": "გახსნის ცერემონია"
     },
     {
-     "lunch": 1
+     "s": 1,
+     "dir": "D1_S1",
+     "t": "10:00–12:30",
+     "en": "E-Government/Digital Government in Korea",
+     "ka": "ელექტრონული მმართველობა / ციფრული მმართველობა კორეაში",
+     "sp": "Dr. Gwang-seok Oh (Professor, Soongsil University)"
+    },
+    {
+     "lunch": 1,
+     "t": "12:30–14:00"
     },
     {
      "s": 2,
@@ -26,7 +35,7 @@
      "t": "14:00–17:00",
      "en": "Portal Development, Service Innovation and Uptake",
      "ka": "პორტალის განვითარება, სერვისების ინოვაცია და გამოყენების ზრდა",
-     "sp": "JongHyuk Oh"
+     "sp": "Jong-hyeok Oh (Senior Executive, AIGC)"
     }
    ]
   },
@@ -42,10 +51,11 @@
      "t": "09:30–12:30",
      "en": "AI and Big Data Trends and Use Cases",
      "ka": "ხელოვნური ინტელექტისა და დიდი მონაცემების ტენდენციები და გამოყენების მაგალითები",
-     "sp": "Keun Ho Choi"
+     "sp": "Keun-ho Choi (Executive Director, Allforland)"
     },
     {
-     "lunch": 1
+     "lunch": 1,
+     "t": "12:30–14:00"
     },
     {
      "s": 4,
@@ -53,7 +63,7 @@
      "t": "14:00–17:00",
      "en": "Authentication and Digital Identity for Public Services",
      "ka": "ავთენტიფიკაცია და ციფრული იდენტობა საჯარო სერვისებისთვის",
-     "sp": ""
+     "sp": "Jae-young Lee (Director, RaonSecure)"
     }
    ]
   },
@@ -69,10 +79,11 @@
      "t": "09:30–12:30",
      "en": "Government Data: Interoperability, Standards, and Data Governance",
      "ka": "სახელმწიფო მონაცემები: თავსებადობა, სტანდარტები და მონაცემთა მმართველობა",
-     "sp": "Chan-il Jung"
+     "sp": "Dr. Chan-il Jeong (AIGC)"
     },
     {
-     "lunch": 1
+     "lunch": 1,
+     "t": "12:30–14:00"
     },
     {
      "s": 6,
@@ -80,25 +91,13 @@
      "t": "14:00–17:00",
      "en": "Digital Government Project Management — Project Management and Project Concept Paper (PCP)",
      "ka": "ციფრული მმართველობის პროექტების მართვა — პროექტების მართვა და პროექტის საკონცეფციო დოკუმენტი (PCP)",
-     "sp": ""
-    }
-   ]
-  },
-  {
-   "n": 4,
-   "date": "2026-11-27",
-   "ws": 1,
-   "en": "Friday, 27 November",
-   "ka": "პარასკევი, 27 ნოემბერი",
-   "slots": [
+     "sp": "Hee-cheol Ahn (Principal Consultant, AIGC)"
+    },
     {
-     "ws": 1,
-     "dir": "D4_workshop",
-     "t": "09:00–12:00",
-     "t2": "14:00–17:00",
-     "en": "AI & Big Data Idea Workshop for my.gov.ge",
-     "ka": "AI-ისა და დიდი მონაცემების იდეების ვორქშოპი my.gov.ge-სთვის",
-     "sp": "Team work · idea cards · presentations · voting"
+     "ev": 1,
+     "t": "17:00–17:30",
+     "en": "Closing Ceremony (Issuance of Certificate of Completion)",
+     "ka": "დახურვის ცერემონია (სერტიფიკატების გადაცემა)"
     }
    ]
   }

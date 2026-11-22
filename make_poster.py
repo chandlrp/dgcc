@@ -22,7 +22,7 @@ HTML = f"""<!doctype html><html><head><meta charset="utf-8">
 body{{margin:0; font-family:Inter,'Noto Sans Georgian',sans-serif; color:#18222B}}
 #s{{width:794px; height:1123px; padding:38px; box-sizing:border-box; background:#fff; display:flex}}
 .p{{flex:1; border-radius:26px; background:#FFFCF4; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:30px}}
-.tag{{background:#08253D; color:#F2C778; font-weight:800; font-size:17px; padding:9px 22px; border-radius:999px}}
+.tag{{background:#08253D; color:#F2C778; font-weight:800; font-size:16px; padding:9px 22px; white-space:nowrap; border-radius:999px}}
 h1{{margin:26px 0 6px; font-size:44px; line-height:1.15; font-weight:800; color:#08253D}}
 h1 small{{display:block; font-size:24px; color:#55626C; font-weight:500; margin-top:8px}}
 .d{{font-size:19px; color:#55626C; margin-top:6px; line-height:1.5}}
@@ -33,9 +33,9 @@ h1 small{{display:block; font-size:24px; color:#55626C; font-weight:500; margin-
 .url em{{font-style:normal; color:#1E7F8C}}
 .n{{margin-top:26px; font-size:16px; color:#55626C; line-height:1.55}}
 </style></head><body><div id="s"><div class="p">
-<span class="tag">my.gov.ge · Capacity Building Training · 24–27.11.2026</span>
+<span class="tag">DGCC – Georgia AI &amp; Digital Government Capacity-Building</span>
 <h1>განრიგი და მასალები<small>Schedule &amp; Session Materials</small></h1>
-<div class="d">სესიის მასალები იხსნება ყოველდღე · Materials open day by day</div>
+<div class="d"><b style="color:#08253D">24–26.11.2026</b><br>სესიის მასალები იხსნება ყოველდღე · Materials open day by day</div>
 <div class="qr">{svg}</div>
 <div class="or">ან აკრიფეთ ბრაუზერში · or type in your browser</div>
 <div class="url">{host}/<em>{path}</em></div>

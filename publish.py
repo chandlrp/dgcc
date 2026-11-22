@@ -1,7 +1,7 @@
 """materials/ 폴더를 읽어 files.json을 만들고 GitHub에 올린다.
 usage: python publish.py           # files.json 갱신 + 커밋 + 푸시
        python publish.py --dry     # files.json만 갱신(올리지 않음)
-- 폴더: 00_common(항상 공개) · D1_S1 D1_S2 · D2_S3 D2_S4 · D3_S5 D3_S6 · D4_workshop
+- 폴더: 00_common(항상 공개) · D1_S1 D1_S2 · D2_S3 D2_S4 · D3_S5 D3_S6
 - 사이트는 그날 00:00(트빌리시)부터 그날까지의 폴더 파일을 보여 준다.
 - 이름이 . 또는 _ 로 시작하는 파일, ~$ 임시 파일은 무시하고 올리지도 않는다(.gitignore).
 """
@@ -10,7 +10,7 @@ from datetime import datetime, timedelta, timezone
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 MAT = os.path.join(ROOT, 'materials')
-ORDER = ['00_common', 'D1_S1', 'D1_S2', 'D2_S3', 'D2_S4', 'D3_S5', 'D3_S6', 'D4_workshop']
+ORDER = ['00_common', 'D1_S1', 'D1_S2', 'D2_S3', 'D2_S4', 'D3_S5', 'D3_S6']
 MAX_MB = 95   # GitHub는 100MB 넘는 파일을 거부
 
 def skip(name):

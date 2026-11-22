@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Training Schedule & Materials · my.gov.ge</title>
-<meta name="description" content="Digital Government Capacity Building Training, Tbilisi, 24–27 Nov 2026 — schedule and session materials">
+<title>DGCC Training Schedule & Materials</title>
+<meta name="description" content="DGCC – Georgia AI & Digital Government Capacity-Building, Tbilisi, 24–26 Nov 2026 — schedule and session materials">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -71,6 +71,9 @@ h1 small{display:block; font-size:clamp(15px,2.8vw,19px); font-weight:500; color
 .sp{font-size:14px; color:var(--ink2); margin-top:6px}
 .slot.lunch{background:var(--paper2); padding-top:10px; padding-bottom:10px}
 .slot.lunch .st{font-size:14px; font-weight:500; color:var(--ink2)}
+.slot.ev{background:#EEF7F6}
+.slot.ev .st{font-size:16px}
+#note{width:100%}
 
 .files{grid-column:2; margin-top:10px; display:flex; flex-direction:column; gap:8px}
 .file{display:flex; align-items:center; gap:12px; text-decoration:none; background:#fff; border:1px solid var(--rule); border-radius:12px; padding:10px 12px; min-height:52px}
@@ -110,10 +113,11 @@ footer{font-size:12px; color:var(--ink2); padding:8px 0 40px; text-align:center}
 <body>
 <header>
   <div class="wrap">
-    <div class="kick">my.gov.ge · Digital Government Capacity Building Training</div>
+    <div class="kick" id="title">DGCC – Georgia AI &amp; Digital Government Capacity-Building</div>
     <h1>სასწავლო პროგრამა და მასალები<small>Training Schedule &amp; Materials</small></h1>
     <div class="meta">
-      <span><b id="dates">24–27.11.2026</b></span>
+      <span><b id="dates">24–26.11.2026 · 09:30–17:00</b></span>
+      <span id="note" class="hidden"></span>
       <span id="venue">Hilton Garden Inn Tbilisi Chavchavadze · 64a Ilia Chavchavadze Ave</span>
     </div>
     <div class="addr">
@@ -184,7 +188,8 @@ function render(files){
       + '<div class="dt"><h2>'+(d.ws?'Workshop':'Day '+d.n)+'<small>'+esc(d.en)+'</small></h2><div class="ka">'+(d.ws?'ვორქშოპი':'დღე '+d.n)+' · '+esc(d.ka)+'</div></div>'
       + pill + '</div>';
     d.slots.forEach(s=>{
-      if(s.lunch){ h += '<div class="slot lunch"><div class="tm">12:30–14:00</div><div class="st">სადილი · Lunch</div></div>'; return }
+      if(s.lunch){ h += '<div class="slot lunch"><div class="tm">'+esc(s.t||'12:30–14:00')+'</div><div class="st">სადილი · Lunch Break</div></div>'; return }
+      if(s.ev){ h += '<div class="slot ev"><div class="tm">'+esc(s.t||'')+'</div><div class="st">'+esc(s.en||'')+'<span class="ka">'+esc(s.ka||'')+'</span></div></div>'; return }
       const list = byDir[s.dir] || [];
       h += '<div class="slot"><div class="tm">'+esc(s.t)+(s.t2?'<br>'+esc(s.t2):'')+'</div><div>'
         + '<div class="sn">'+(s.ws?'Workshop · ვორქშოპი':'Session '+s.s+' · სესია '+s.s)+'</div>'
@@ -220,6 +225,8 @@ function clock(){
     DAYS = sc.days || [];
     if(sc.venue) $('#venue').textContent = sc.venue;
     if(sc.dates) $('#dates').textContent = sc.dates;
+    if(sc.title) $('#title').textContent = sc.title;
+    if(sc.note){ $('#note').textContent = sc.note; $('#note').classList.remove('hidden') }
     render(j.files);
     if(j.updated) $('#foot').textContent = 'Last updated '+j.updated+' (Tbilisi)';
     const t = document.querySelector('.day.today'); if(t && !location.hash) t.scrollIntoView({block:'start'});
