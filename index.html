@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Training Schedule & Materials · my.gov.ge</title>
+<meta name="description" content="Digital Government Capacity Building Training, Tbilisi, 24–27 Nov 2026 — schedule and session materials">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#08253D; --navy2:#0D2D45; --navy3:#16384F; --line:#335D71;
+  --gold:#F2C778; --teal:#50D8C6; --teal-d:#1E7F8C; --soft:#DDF4F1;
+  --paper:#FFFCF4; --paper2:#F7F1E3; --ink:#18222B; --ink2:#55626C; --rule:#E7DFCC;
+  --f:'Inter','Noto Sans Georgian',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0; font-family:var(--f); color:var(--ink); background:var(--paper2); line-height:1.45}
+a{color:inherit}
+.wrap{max-width:880px; margin:0 auto; padding:0 16px}
+
+/* header */
+header{background:var(--navy); color:#fff; padding:22px 0 26px}
+.kick{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); font-weight:700}
+h1{margin:8px 0 2px; font-size:clamp(24px,5.2vw,36px); line-height:1.18; font-weight:800}
+h1 small{display:block; font-size:clamp(15px,2.8vw,19px); font-weight:500; color:#BFD3DF; margin-top:6px}
+.meta{margin-top:12px; font-size:14px; color:#BFD3DF; display:flex; flex-wrap:wrap; gap:6px 18px}
+.meta b{color:#fff; font-weight:600}
+
+/* readable link */
+.addr{margin-top:18px; display:flex; flex-wrap:wrap; align-items:center; gap:10px;
+  background:var(--navy3); border:1px solid var(--line); border-radius:14px; padding:12px 14px}
+.addr .lbl{font-size:12px; color:#BFD3DF; width:100%}
+.addr code{font-family:var(--mono); font-size:clamp(18px,4.6vw,26px); font-weight:700; color:#fff; letter-spacing:.01em; word-break:break-all}
+.addr code em{font-style:normal; color:var(--teal)}
+.addr button{margin-left:auto; font:600 14px var(--f); border:0; border-radius:10px; padding:9px 14px; background:var(--teal); color:var(--navy); cursor:pointer}
+.addr button:active{transform:translateY(1px)}
+
+/* now bar */
+.now{margin:18px 0 4px; font-size:14px; color:var(--ink2); display:flex; flex-wrap:wrap; gap:4px 14px; align-items:center}
+.now b{color:var(--ink)}
+.dot{display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--teal-d); margin-right:6px; vertical-align:1px}
+
+/* days */
+.day{background:var(--paper); border:1px solid var(--rule); border-radius:18px; margin:16px 0; overflow:hidden}
+.day.today{border-color:var(--teal-d); box-shadow:0 0 0 2px var(--soft)}
+.dh{display:flex; align-items:center; gap:14px; padding:16px 18px; border-bottom:1px solid var(--rule); background:#fff}
+.dn{flex:none; width:54px; height:54px; border-radius:14px; background:var(--navy); color:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; line-height:1}
+.dn small{font-size:10px; letter-spacing:.08em; color:var(--gold); font-weight:700}
+.dn b{font-size:24px; font-weight:800; margin-top:3px}
+.day.ws .dn{background:var(--teal-d)}
+.dt{flex:1; min-width:0}
+.dt h2{margin:0; font-size:18px; font-weight:700}
+.dt h2 small{font-weight:500; color:var(--ink2); font-size:14px; margin-left:6px}
+.dt .ka{font-size:13px; color:var(--ink2); margin-top:2px}
+.pill{flex:none; font-size:12px; font-weight:700; border-radius:999px; padding:5px 10px; white-space:nowrap}
+.pill.open{background:var(--soft); color:var(--teal-d)}
+.pill.today{background:var(--teal-d); color:#fff}
+.pill.lock{background:var(--paper2); color:var(--ink2)}
+
+.slot{display:grid; grid-template-columns:118px 1fr; gap:4px 16px; padding:16px 18px; border-bottom:1px solid var(--rule)}
+.slot:last-child{border-bottom:0}
+.tm{font-family:var(--mono); font-size:14px; font-weight:700; color:var(--navy); padding-top:2px}
+.tm small{display:block; font-family:var(--f); font-weight:500; font-size:12px; color:var(--ink2); margin-top:3px}
+.sn{font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--teal-d)}
+.st{font-size:17px; font-weight:700; margin-top:2px}
+.st .ka{display:block; font-size:14px; font-weight:500; color:var(--ink2); margin-top:3px}
+.sp{font-size:14px; color:var(--ink2); margin-top:6px}
+.slot.lunch{background:var(--paper2); padding-top:10px; padding-bottom:10px}
+.slot.lunch .st{font-size:14px; font-weight:500; color:var(--ink2)}
+
+.files{grid-column:2; margin-top:10px; display:flex; flex-direction:column; gap:8px}
+.file{display:flex; align-items:center; gap:12px; text-decoration:none; background:#fff; border:1px solid var(--rule); border-radius:12px; padding:10px 12px; min-height:52px}
+.file:hover{border-color:var(--teal-d); background:#FBFFFE}
+.ic{flex:none; width:36px; height:42px; border-radius:6px; background:#C8432F; color:#fff; font:800 10px var(--f); display:flex; align-items:flex-end; justify-content:center; padding-bottom:6px; position:relative}
+.ic::after{content:""; position:absolute; top:0; right:0; border-style:solid; border-width:0 10px 10px 0; border-color:transparent var(--paper2) rgba(0,0,0,.18) transparent}
+.ic.x-pptx,.ic.x-ppt{background:#C9622B} .ic.x-docx,.ic.x-doc{background:#2B5DB8} .ic.x-xlsx,.ic.x-xls{background:#24794A} .ic.x-zip{background:#6B6F76}
+.fn{flex:1; min-width:0; font-size:15px; font-weight:600; overflow-wrap:anywhere}
+.fn small{display:block; font-weight:500; font-size:12px; color:var(--ink2); margin-top:2px}
+.dl{flex:none; width:36px; height:36px; border-radius:10px; background:var(--soft); color:var(--teal-d); display:flex; align-items:center; justify-content:center}
+.note{grid-column:2; margin-top:10px; font-size:13px; color:var(--ink2); background:var(--paper2); border-radius:10px; padding:8px 12px}
+.note.lock::before{content:"🔒 "}
+
+.common{padding:16px 18px}
+.common .files{grid-column:auto; margin-top:0}
+
+footer{font-size:12px; color:var(--ink2); padding:8px 0 40px; text-align:center}
+.err{background:#FDECEA; color:#8A2A1C; border-radius:12px; padding:10px 14px; margin:12px 0; font-size:14px}
+.hidden{display:none}
+
+@media (max-width:560px){
+  .slot{grid-template-columns:1fr; gap:6px}
+  .files,.note{grid-column:1}
+  .dh{padding:14px; gap:12px}
+  .slot{padding:14px}
+  .dt h2 small{display:block; margin:2px 0 0}
+  .dh{flex-wrap:wrap}
+  .dt{flex-basis:calc(100% - 66px)}
+  .pill{margin-left:66px}
+}
+@media print{
+  header{background:#fff; color:var(--ink)} .addr{background:#fff} .addr code{color:var(--ink)} .addr button{display:none}
+  body{background:#fff} .day{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="kick">my.gov.ge · Digital Government Capacity Building Training</div>
+    <h1>სასწავლო პროგრამა და მასალები<small>Training Schedule &amp; Materials</small></h1>
+    <div class="meta">
+      <span><b id="dates">24–27.11.2026</b></span>
+      <span id="venue">Hilton Garden Inn Tbilisi Chavchavadze · 64a Ilia Chavchavadze Ave</span>
+    </div>
+    <div class="addr">
+      <span class="lbl">ამ გვერდის მისამართი · Address of this page</span>
+      <code id="addr"></code>
+      <button type="button" id="copy">Copy</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="now" id="now"></div>
+  <div class="err hidden" id="err"></div>
+  <div id="days"></div>
+  <footer id="foot"></footer>
+</main>
+
+<script>
+/* =====================================================================
+ * 설정 — 일정·세션명은 교육계획서 v1.1(일시·장소), 세션명은 각 세션 교육자료 표지(2026-11-18 기준본, 세션 4는 계획서)
+ * 공개 시각: 그날 00:00 트빌리시(UTC+4). 각 날짜가 열리면 그날까지의 세션 자료가 모두 보인다.
+ * 파일 목록은 files.json (publish.py가 materials/ 폴더를 읽어 만듦).
+ * 조지아어 문구는 초벌 → 현지 검토 필요.
+ * ===================================================================== */
+const TZ = '+04:00';
+let DAYS = [];   // schedule.json에서 읽음
+const COMMON = '00_common';
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const q = new URLSearchParams(location.search);
+// 미리보기: ?asof=2026-11-26 (그 날짜 00:00 트빌리시 기준으로 보기)
+const NOW = q.get('asof') ? new Date(q.get('asof')+'T00:00:00'+TZ).getTime() + 1 : Date.now();
+const openAt = d => new Date(d.date+'T00:00:00'+TZ).getTime();
+const isOpen = d => NOW >= openAt(d);
+const tbToday = new Date(NOW + 4*3600e3).toISOString().slice(0,10);   // Tbilisi calendar date
+
+function fmtSize(b){ return b>=1048576 ? (b/1048576).toFixed(1)+' MB' : Math.max(1,Math.round(b/1024))+' KB' }
+function prettyName(n){ return n.replace(/\.[^.]+$/,'').replace(/_/g,' ') }
+function ext(n){ const m = /\.([^.]+)$/.exec(n); return m ? m[1].toLowerCase() : '' }
+const DL = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>';
+
+function filesHTML(list){
+  return '<div class="files">' + list.map(f=>{
+    const x = ext(f.name), href = 'materials/'+encodeURIComponent(f.dir)+'/'+encodeURIComponent(f.name)+'?v='+f.v;
+    return '<a class="file" href="'+href+'" download="'+esc(f.name)+'" target="_blank" rel="noopener">'
+      + '<span class="ic x-'+esc(x)+'">'+esc(x.toUpperCase().slice(0,4))+'</span>'
+      + '<span class="fn">'+esc(prettyName(f.name))+'<small>'+esc(x.toUpperCase())+' · '+fmtSize(f.size)+'</small></span>'
+      + '<span class="dl" aria-hidden="true">'+DL+'</span></a>';
+  }).join('') + '</div>';
+}
+
+function render(files){
+  const byDir = {};
+  (files||[]).forEach(f=>{ (byDir[f.dir] = byDir[f.dir] || []).push(f) });
+  let h = '';
+  if((byDir[COMMON]||[]).length){
+    h += '<section class="day"><div class="dh"><div class="dn"><small>ALL</small><b>★</b></div><div class="dt"><h2>ზოგადი მასალები<small>General materials</small></h2></div></div>'
+      + '<div class="common">'+filesHTML(byDir[COMMON])+'</div></section>';
+  }
+  DAYS.forEach(d=>{
+    const open = isOpen(d), today = d.date===tbToday;
+    const pill = today ? '<span class="pill today">დღეს · Today</span>'
+      : open ? '<span class="pill open">ხელმისაწვდომია · Open</span>'
+      : '<span class="pill lock">🔒 '+esc(d.date.slice(8)+'.11')+'</span>';
+    h += '<section class="day'+(today?' today':'')+(d.ws?' ws':'')+'" id="day'+d.n+'"><div class="dh">'
+      + '<div class="dn"><small>'+(d.ws?'WS':'DAY')+'</small><b>'+d.n+'</b></div>'
+      + '<div class="dt"><h2>'+(d.ws?'Workshop':'Day '+d.n)+'<small>'+esc(d.en)+'</small></h2><div class="ka">'+(d.ws?'ვორქშოპი':'დღე '+d.n)+' · '+esc(d.ka)+'</div></div>'
+      + pill + '</div>';
+    d.slots.forEach(s=>{
+      if(s.lunch){ h += '<div class="slot lunch"><div class="tm">12:30–14:00</div><div class="st">სადილი · Lunch</div></div>'; return }
+      const list = byDir[s.dir] || [];
+      h += '<div class="slot"><div class="tm">'+esc(s.t)+(s.t2?'<br>'+esc(s.t2):'')+'</div><div>'
+        + '<div class="sn">'+(s.ws?'Workshop · ვორქშოპი':'Session '+s.s+' · სესია '+s.s)+'</div>'
+        + '<div class="st">'+esc(s.en)+'<span class="ka">'+esc(s.ka)+'</span></div>'
+        + (s.sp?'<div class="sp">'+esc(s.sp)+'</div>':'') + '</div>';
+      if(!open) h += '<div class="note lock">მასალები გაიხსნება '+esc(d.ka.split(', ')[1])+' · Materials open on '+esc(d.en.split(', ')[1])+'</div>';
+      else if(!list.length) h += '<div class="note">მასალები მალე დაემატება · Materials will be added soon</div>';
+      else h += filesHTML(list);
+      h += '</div>';
+    });
+    h += '</section>';
+  });
+  $('#days').innerHTML = h;
+}
+
+function clock(){
+  const t = new Date(Date.now() + 4*3600e3).toISOString().slice(11,16);
+  $('#now').innerHTML = '<span><span class="dot"></span>თბილისის დრო · Tbilisi time <b>'+t+'</b>'+(q.get('asof')?' · preview as of '+esc(q.get('asof')):'')+'</span>';
+}
+
+(function init(){
+  const url = location.host ? location.host + location.pathname.replace(/index\.html$/,'') : 'chandlrp.github.io/dgcc/';
+  const parts = url.replace(/\/$/,'').split('/');
+  $('#addr').innerHTML = parts.length>1 ? esc(parts.slice(0,-1).join('/')+'/') + '<em>'+esc(parts[parts.length-1])+'</em>' : '<em>'+esc(parts[0])+'</em>';
+  $('#copy').onclick = async ()=>{
+    try{ await navigator.clipboard.writeText('https://'+url); $('#copy').textContent = 'Copied ✓' }
+    catch(e){ $('#copy').textContent = 'https://'+url }
+    setTimeout(()=>{ $('#copy').textContent = 'Copy' }, 2000);
+  };
+  clock(); setInterval(clock, 30000);
+  const get = f => fetch(f+'?t='+Date.now(), {cache:'no-store'}).then(r=>{ if(!r.ok) throw new Error(f+' '+r.status); return r.json() });
+  Promise.all([get('schedule.json'), get('files.json')]).then(([sc, j])=>{
+    DAYS = sc.days || [];
+    if(sc.venue) $('#venue').textContent = sc.venue;
+    if(sc.dates) $('#dates').textContent = sc.dates;
+    render(j.files);
+    if(j.updated) $('#foot').textContent = 'Last updated '+j.updated+' (Tbilisi)';
+    const t = document.querySelector('.day.today'); if(t && !location.hash) t.scrollIntoView({block:'start'});
+  }).catch(e=>{
+    $('#err').textContent = 'ფაილების სია ვერ ჩაიტვირთა. გთხოვთ, განაახლოთ გვერდი. · Could not load the page data — please reload the page. ('+e.message+')';
+    $('#err').classList.remove('hidden');
+  });
+})();
+</script>
+</body>
+</html>
