@@ -1,9 +1,10 @@
 {
- "_help": "일정 편집: 시간(t), 제목(en·ka), 강사(sp), 날짜(date, 그날 00:00 트빌리시에 자료 공개)를 고친 뒤 publish.bat. dir은 materials 폴더 이름이라 바꾸지 마세요. 쉼표·따옴표 형식이 깨지면 사이트가 안 열립니다. 행사(개회·폐회 등)는 {\"ev\":1,\"t\":\"시간\",\"en\":\"영어\",\"ka\":\"조지아어\"}. 출처: 바탕화면 「2026 조지아 DGCC 역량강화 개최 계획_영문.hwp」.",
+ "_help": "일정 편집: 시간(t), 제목(en·ka), 강사(sp), 날짜(date, 그날 \"open\" 시각(트빌리시)에 자료 공개)를 고친 뒤 publish.bat. dir은 materials 폴더 이름이라 바꾸지 마세요. 쉼표·따옴표 형식이 깨지면 사이트가 안 열립니다. 행사(개회·폐회 등)는 {\"ev\":1,\"t\":\"시간\",\"en\":\"영어\",\"ka\":\"조지아어\"}. 출처: 바탕화면 「2026 조지아 DGCC 역량강화 개최 계획_영문.hwp」.",
  "title": "DGCC – Georgia AI & Digital Government Capacity-Building",
  "dates": "24–26.11.2026 · 09:30–17:00",
  "venue": "Hilton Garden Inn Tbilisi Chavchavadze · 64a Ilia Chavchavadze Avenue, 0162",
  "note": "კორეულ-ქართული თანმიმდევრული თარგმანი · Consecutive Korean–Georgian interpretation throughout the program",
+ "open": "09:00",
  "days": [
   {
    "n": 1,

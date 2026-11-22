@@ -2,7 +2,7 @@
 usage: python publish.py           # files.json 갱신 + 커밋 + 푸시
        python publish.py --dry     # files.json만 갱신(올리지 않음)
 - 폴더: 00_common(항상 공개) · D1_S1 D1_S2 · D2_S3 D2_S4 · D3_S5 D3_S6
-- 사이트는 그날 00:00(트빌리시)부터 그날까지의 폴더 파일을 보여 준다.
+- 사이트는 그날 09:00(트빌리시, schedule.json "open")부터 그날까지의 폴더 파일을 보여 준다.
 - 이름이 . 또는 _ 로 시작하는 파일, ~$ 임시 파일은 무시하고 올리지도 않는다(.gitignore).
 """
 import hashlib, json, os, subprocess, sys
