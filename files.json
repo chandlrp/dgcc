@@ -1,41 +1,53 @@
 {
- "updated": "2026-11-22 14:38",
+ "updated": "2026-11-22 15:19",
  "files": [
   {
    "dir": "D1_S1",
    "name": "Session 1. eGovernment_Digital Government in Korea.pdf",
    "size": 2699297,
-   "v": "fcd40de146"
+   "v": "fcd40de146",
+   "pages": 55,
+   "thumb": "fcd40de146.jpg"
   },
   {
    "dir": "D1_S2",
    "name": "Session 2. Portal Development, Service Innovation and Uptake.pdf",
    "size": 2290091,
-   "v": "d94c5317e7"
+   "v": "d94c5317e7",
+   "pages": 49,
+   "thumb": "d94c5317e7.jpg"
   },
   {
    "dir": "D2_S3",
    "name": "Session 3. AI and Big Data Trends and Use Cases.pdf",
    "size": 12229709,
-   "v": "d674cb09b5"
+   "v": "d674cb09b5",
+   "pages": 81,
+   "thumb": "d674cb09b5.jpg"
   },
   {
    "dir": "D2_S4",
    "name": "Session 4. Authentication and Digital Identity for Public Services.pdf",
    "size": 5838838,
-   "v": "ec77096a59"
+   "v": "ec77096a59",
+   "pages": 60,
+   "thumb": "ec77096a59.jpg"
   },
   {
    "dir": "D3_S5",
    "name": "Session 5. Government Data_Interoperability, Standards, and Data Governance.pdf",
    "size": 3971602,
-   "v": "52cb116421"
+   "v": "52cb116421",
+   "pages": 44,
+   "thumb": "52cb116421.jpg"
   },
   {
    "dir": "D3_S6",
    "name": "Session 6. Digital Government Project Management Training Course_Project Management and PCP.pdf",
    "size": 4325409,
-   "v": "f28b4b21e5"
+   "v": "f28b4b21e5",
+   "pages": 32,
+   "thumb": "f28b4b21e5.jpg"
   }
  ]
 }

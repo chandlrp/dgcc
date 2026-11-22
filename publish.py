@@ -13,6 +13,22 @@ MAT = os.path.join(ROOT, 'materials')
 ORDER = ['00_common', 'D1_S1', 'D1_S2', 'D2_S3', 'D2_S4', 'D3_S5', 'D3_S6']
 MAX_MB = 95   # GitHub는 100MB 넘는 파일을 거부
 
+THUMBS = os.path.join(ROOT, 'thumbs')
+
+def cover(fp, h):
+    """PDF 첫 페이지 → thumbs/<버전>.jpg (가로 900px) + 쪽수. 파일이 바뀌면 버전이 바뀌어 새 그림."""
+    try:
+        import fitz
+    except ImportError:
+        print('!! PyMuPDF(fitz)가 없어 표지 그림을 못 만듦 → pip install pymupdf'); return {}
+    os.makedirs(THUMBS, exist_ok=True)
+    out = os.path.join(THUMBS, h + '.jpg')
+    doc = fitz.open(fp)
+    if not os.path.exists(out):
+        pg = doc[0]; z = 900 / pg.rect.width
+        doc[0].get_pixmap(matrix=fitz.Matrix(z, z)).pil_save(out, quality=82)
+    return {'pages': doc.page_count, 'thumb': h + '.jpg'}
+
 def skip(name):
     return name.startswith(('.', '_', '~$')) or name.lower() in ('thumbs.db', 'desktop.ini')
 
@@ -28,7 +44,15 @@ for d in ORDER:
         if size > MAX_MB * 1048576:
             big.append(f'{d}/{n} ({size/1048576:.0f} MB)'); continue
         h = hashlib.sha1(open(fp, 'rb').read()).hexdigest()[:10]
-        files.append({'dir': d, 'name': n, 'size': size, 'v': h})
+        item = {'dir': d, 'name': n, 'size': size, 'v': h}
+        if n.lower().endswith('.pdf'):
+            item.update(cover(fp, h))
+        files.append(item)
+# 지금 파일에 없는 옛 표지 그림 지우기
+if os.path.isdir(THUMBS):
+    keep = {x.get('thumb') for x in files}
+    for t in os.listdir(THUMBS):
+        if t not in keep: os.remove(os.path.join(THUMBS, t))
 extra = [d for d in os.listdir(MAT) if os.path.isdir(os.path.join(MAT, d)) and d not in ORDER]
 
 tb = datetime.now(timezone(timedelta(hours=4))).strftime('%Y-%m-%d %H:%M')
